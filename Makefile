@@ -16,13 +16,13 @@ clean:
 	-/bin/rm Dockerfile
 
 rmi:
-	docker rmi $(NAME)
+	docker image rm $(NAME)
 
 bash:
-	docker run -it --rm $(NAME) /bin/bash
+	docker container run -it --rm $(NAME) /bin/bash
 
 start:
-	docker run -d $(PORT_OPTS) $(VOLUME_OPTS) $(NAME)
+	docker container run -d $(PORT_OPTS) $(VOLUME_OPTS) $(NAME)
 
 push:
-	docker push $(NAME)
+	docker image push $(NAME)
