@@ -8,3 +8,8 @@ OpenJDK を jlink で最小化している。
 
 * java.se
 * jdk.unsupported (sun.misc.Unsafe を使用するため)
+
+環境変数
+--------
+
+* JAVA_OPTS : Java VM オプション (default: なし)
