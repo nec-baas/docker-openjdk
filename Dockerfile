@@ -1,7 +1,8 @@
 FROM debian:sid-slim
 
+
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends curl wget \
+    && apt-get install -y --no-install-recommends curl wget gettext-base \
     && rm -rf /var/lib/apt/lists/*
 
 ENV JAVA_VERSION 11.0.1
