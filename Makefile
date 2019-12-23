@@ -4,7 +4,7 @@ all: image
 
 Dockerfile: Dockerfile.in
 	@if [ -n "$(http_proxy)" ]; then \
-	    cat Dockerfile.in | sed "s|%%PROXY_URL%%|$(http_proxy)|" > Dockerfile; \
+	    cat Dockerfile.in | sed "s|%%PROXY_URL%%|$(http_proxy)|" | sed "s|# proxy||" > Dockerfile; \
 	else \
 	    grep -v "# proxy" Dockerfile.in > Dockerfile; \
 	fi
