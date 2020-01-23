@@ -1,5 +1,5 @@
 # 1st stage
-FROM openjdk:11.0.5
+FROM openjdk:11.0.6
 
 # create minified JDK with jlink.
 RUN jlink --module-path ${JAVA_HOME}/jmods \

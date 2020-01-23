@@ -1,4 +1,4 @@
-NAME = necbaas/openjdk:11.0.5
+NAME = necbaas/openjdk:11.0.6
 
 all: image
 
