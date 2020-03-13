@@ -4,7 +4,7 @@ FROM openjdk:11.0.6
 # create minified JDK with jlink.
 RUN jlink --module-path ${JAVA_HOME}/jmods \
         --compress=2 \
-        --add-modules java.se,jdk.jdi,jdk.httpserver,jdk.unsupported \
+        --add-modules java.se,jdk.jdi,jdk.httpserver,jdk.unsupported,jdk.crypto.cryptoki \
         --no-header-files \
         --no-man-pages \
         --output /opt/jdk-min
