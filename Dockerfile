@@ -1,5 +1,5 @@
 # 1st stage
-FROM openjdk:11.0.6
+FROM openjdk:11.0.8
 
 # create minified JDK with jlink.
 RUN jlink --module-path ${JAVA_HOME}/jmods \
@@ -11,7 +11,6 @@ RUN jlink --module-path ${JAVA_HOME}/jmods \
 
 # 2nd stage
 FROM debian:sid-slim
-
 
 # Install curl, wget, gettext-base(for envsubst)
 RUN apt-get update \
